@@ -53,10 +53,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'project.urls'
 
+SETTING_PATH = os.path.normpath(os.path.dirname(__file__))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join('test_app', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
