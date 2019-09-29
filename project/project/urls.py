@@ -20,5 +20,6 @@ from test_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('celery_test/', views.celery_test, name='celery_test')
+    path('celery_test/', views.celery_test, name='celery_test'),
+    path('celery_test/<str:task_id>/', views.show_status, name='celery_test_show'),
 ]
